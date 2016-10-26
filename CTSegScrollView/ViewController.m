@@ -31,6 +31,7 @@
     [self.view addSubview:topLine];
     
     CTSegScrollView* segView = [[CTSegScrollView alloc] initWithFrame:CGRectMake(0, 64, DEVICE_WIDTH, DEVICE_HEIGHT - 64) titleArray:@[@"通知",@"赞与感谢",@"私信"] delegate:self];
+    [segView setupView];
     [self.view addSubview:segView];
     
     

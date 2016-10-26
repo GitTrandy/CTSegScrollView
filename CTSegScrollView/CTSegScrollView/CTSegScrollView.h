@@ -26,10 +26,21 @@
 
 @interface CTSegScrollView : UIView
 
-@property (nonatomic,strong)    UIFont*     textFont;
-@property (nonatomic,strong)    NSArray*    viewArray;
-@property (nonatomic,weak)      id<CTSegScrollViewDelegate> delegate;
+@property (nonatomic, strong)    UIColor        *topViewColor;
+@property (nonatomic, strong)    UIColor        *spLineColor;
+@property (nonatomic, assign)    CGFloat        topViewHeight;
+@property (nonatomic, strong)    UIFont         *titleFont;
+@property (nonatomic, strong)    UIColor        *titleColor;
+@property (nonatomic, strong)    UIColor        *selectViewColor;
+@property (nonatomic, assign)    CGFloat        selectViewHeight;
+
+@property (nonatomic, strong)    NSArray        *viewArray;
+@property (nonatomic, weak)      id<CTSegScrollViewDelegate> delegate;
+@property (nonatomic, assign)    BOOL showsHorizontalScrollIndicator;
+
 
 - (instancetype)initWithFrame:(CGRect)frame titleArray:(NSArray*)titleArray delegate:(id <CTSegScrollViewDelegate>) delegate;
+
+- (void)setupView;
 
 @end
